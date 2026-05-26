@@ -1,0 +1,380 @@
+<!-- /* ══════════════════════════════════════════════════════════════════
+Explore Cloud ML Tools Activity
+Introduction to AI 2026
+Designed by Amanda Wilkerson, 2026
+For questions or feedback, contact Amanda at <amanda@rhinicorn.com>
+
+Copyright (C) <2026> <Amanda Wilkerson>
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or 
+  any later version.
+    
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program. If not, see https://www.gnu.org/licenses .
+════════════════════════════════════════════════════════════════════ */ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Explore: Cloud ML Tools Browse</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    color: #222;
+    max-width: 7.5in;
+    margin: 0.75in auto;
+    line-height: 1.55;
+    background: #fff;
+  }
+  .course-header {
+    border-bottom: 3px solid #1A4731;
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+  }
+  .course-header p {
+    margin: 2px 0;
+    font-size: 10.5pt;
+    color: #444;
+  }
+  h1.main-title {
+    font-size: 18pt;
+    color: #1A4731;
+    margin-bottom: 4px;
+  }
+  h1.sub-title {
+    margin-top: 0;
+    font-size: 14pt;
+    color: #5B2D8E;
+  }
+  .badge {
+    display: inline-block;
+    background: #EAF3E8;
+    color: #1A4731;
+    font-size: 9pt;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    letter-spacing: 0.3px;
+  }
+  .intro-box {
+    background: #EAF3E8;
+    border-left: 4px solid #1A4731;
+    padding: 12px 16px;
+    margin-bottom: 24px;
+    font-size: 11pt;
+    border-radius: 0 6px 6px 0;
+  }
+  .intro-box p { margin: 6px 0; }
+  h2 {
+    font-size: 13pt;
+    color: #5B2D8E;
+    margin-top: 28px;
+    margin-bottom: 8px;
+  }
+  .context-box {
+    background: #F0E8F8;
+    border-left: 4px solid #5B2D8E;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-size: 11pt;
+    border-radius: 0 6px 6px 0;
+  }
+  .context-box p { margin: 6px 0; }
+  .step-wrap { margin-bottom: 20px; }
+  .step-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 6px;
+  }
+  .step-num {
+    background: #1A4731;
+    color: #fff;
+    font-weight: bold;
+    font-size: 11pt;
+    min-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .step-title {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #1A4731;
+    line-height: 1.4;
+    padding-top: 4px;
+  }
+  .step-body {
+    margin-left: 44px;
+    font-size: 11pt;
+  }
+  .step-body p { margin: 4px 0 8px 0; }
+  .step-body ul {
+    margin: 6px 0 8px 0;
+    padding-left: 20px;
+  }
+  .step-body li { margin-bottom: 6px; }
+  .note-tag {
+    background: #EAF3E8;
+    border: 1px solid #b0d4bc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 10.5pt;
+    margin: 8px 0;
+    color: #1A4731;
+  }
+  .divider {
+    border: none;
+    border-top: 1px solid #b0d4bc;
+    margin: 22px 0;
+  }
+  .link-btn {
+    display: inline-block;
+    background: #1A4731;
+    color: #fff;
+    font-weight: bold;
+    font-size: 11pt;
+    padding: 9px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 6px 0 10px 0;
+    transition: background 0.15s;
+  }
+  .link-btn:hover { background: #133823; }
+  .reflect-box {
+    border: 1px solid #b0d4bc;
+    background: #EAF3E8;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-top: 28px;
+  }
+  .reflect-box h2 { margin-top: 0; }
+  .reflect-intro {
+    font-size: 11pt;
+    margin: 0 0 14px 0;
+    color: #333;
+  }
+  .question-block { margin-bottom: 20px; }
+  .question-text {
+    font-size: 11pt;
+    margin: 0 0 10px 0;
+    color: #222;
+    line-height: 1.5;
+  }
+  .question-num { font-weight: bold; color: #1A4731; }
+  .reveal-btn {
+    background: #5B2D8E;
+    color: #F0E8F8;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 16px;
+    font-size: 10.5pt;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .reveal-btn:hover { background: #4a2275; }
+  .sample-answer {
+    display: none;
+    background: #F0E8F8;
+    border-left: 4px solid #5B2D8E;
+    border-radius: 0 6px 6px 0;
+    padding: 11px 15px;
+    margin-top: 10px;
+    font-size: 11pt;
+    color: #2a1040;
+    line-height: 1.55;
+  }
+  .sample-answer-label {
+    font-size: 9pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #5B2D8E;
+    margin-bottom: 5px;
+  }
+  .lifecycle-tag {
+    display: inline-block;
+    background: #1A4731;
+    color: #fff;
+    font-size: 9.5pt;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin: 2px 3px 2px 0;
+  }
+  .footer {
+    margin-top: 36px;
+    font-size: 9pt;
+    color: #888;
+    text-align: center;
+    border-top: 1px solid #b0d4bc;
+    padding-top: 8px;
+  }
+  a { color: #1A4731; }
+</style>
+</head>
+<body>
+
+<div class="course-header">
+  <p><strong>AI Essentials</strong></p>
+  <p>Module 4 &nbsp;|&nbsp; Non-Graded Exploration Activity</p>
+</div>
+
+<h1 class="main-title">Explore: Cloud ML Tools Browse</h1>
+<h1 class="sub-title">AWS SageMaker Canvas</h1>
+<div class="badge">BROWSE &amp; REFLECT &nbsp;|&nbsp; NO ACCOUNT REQUIRED &nbsp;|&nbsp; NO SUBMISSION REQUIRED</div>
+
+<div class="intro-box">
+  <p><strong>Purpose:</strong> In Module 4 you examined the machine learning lifecycle: from problem framing and data preparation through model training, evaluation, and deployment. Real cloud platforms package many of those steps into products your organization might already subscribe to or evaluate. This activity connects those lifecycle concepts to a specific, widely used tool.</p>
+  <p><strong>What to do:</strong> Follow the guided steps below to browse the AWS SageMaker Canvas product page. You do not need an AWS account. When you finish, answer the three reflection prompts and compare your thinking to the sample answers.</p>
+</div>
+
+<div class="context-box">
+  <p><strong>What is SageMaker Canvas?</strong> Amazon Web Services (AWS) is one of the three dominant cloud providers alongside Microsoft Azure and Google Cloud. SageMaker is AWS's machine learning platform, and Canvas is its no-code interface within that platform. It is designed so that business analysts and domain experts can build and deploy ML models without writing code, using the same underlying infrastructure that data science teams use.</p>
+</div>
+
+<h2>GUIDED BROWSE STEPS</h2>
+
+<div class="step-wrap">
+  <div class="step-header">
+    <div class="step-num">1</div>
+    <div class="step-title">Open the SageMaker Canvas product page</div>
+  </div>
+  <div class="step-body">
+    <p>Click the link below to open the AWS SageMaker Canvas page in a new tab. You do not need to sign in or create an account.</p>
+    <a class="link-btn" href="https://aws.amazon.com/sagemaker/ai/canvas/" target="_blank">Open AWS SageMaker Canvas</a>
+    <div class="note-tag">&#9432; <strong>Page layout tip:</strong> AWS product pages typically open with a headline and a short description, followed by sections covering features, use cases, and how it works. Scroll slowly and read the section headings before diving into the details.</div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="step-wrap">
+  <div class="step-header">
+    <div class="step-num">2</div>
+    <div class="step-title">Find what the tool does and who it is for</div>
+  </div>
+  <div class="step-body">
+    <p>Look for language near the top of the page that describes the tool's purpose and intended audience. As you read, ask yourself:</p>
+    <ul>
+      <li>Who is this tool designed for? Developers, data scientists, or someone else?</li>
+      <li>Does the page mention coding, programming, or writing scripts as a requirement?</li>
+      <li>What words does AWS use to describe the level of technical skill needed?</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="step-wrap">
+  <div class="step-header">
+    <div class="step-num">3</div>
+    <div class="step-title">Identify the problem types it handles</div>
+  </div>
+  <div class="step-body">
+    <p>Scroll to find a section describing what kinds of ML problems Canvas can solve. Look for a features list, a "what you can build" section, or a use-case grid. Note any specific problem types listed, such as:</p>
+    <ul>
+      <li>Classification (predicting a category)</li>
+      <li>Regression (predicting a number)</li>
+      <li>Forecasting (predicting future values over time)</li>
+      <li>Natural language processing or image analysis</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="step-wrap">
+  <div class="step-header">
+    <div class="step-num">4</div>
+    <div class="step-title">Map features to the ML lifecycle stages from Module 4</div>
+  </div>
+  <div class="step-body">
+    <p>Look for any "How it works" diagram or step-by-step feature description. As you read, think about which stages of the ML lifecycle each feature covers:</p>
+    <ul>
+      <li>Does Canvas help with bringing data in and preparing it?</li>
+      <li>Does it handle model training automatically, or does the user configure it?</li>
+      <li>Does it include model evaluation or accuracy metrics?</li>
+      <li>Can users deploy the model or export predictions from within the tool?</li>
+    </ul>
+    <div class="note-tag">&#9432; <strong>Note:</strong> AWS updates product pages regularly. If a section has moved or changed since this activity was written, use your best judgment based on what you can find. The goal is to practice applying lifecycle vocabulary to real product descriptions, not to find one specific page element.</div>
+  </div>
+</div>
+
+<div class="reflect-box">
+  <h2>REFLECTION QUESTIONS</h2>
+  <p class="reflect-intro">Based on your browse, think through each question below. Then reveal the sample answer to compare your thinking. Your observations from the live page may differ slightly if AWS has updated their content.</p>
+
+  <div class="question-block">
+    <p class="question-text"><span class="question-num">1.</span> Which stages of the ML lifecycle does SageMaker Canvas appear to support? Use the lifecycle vocabulary from Module 4 in your answer.</p>
+    <button class="reveal-btn" onclick="toggleAnswer('ans1', this)">Reveal a sample answer</button>
+    <div class="sample-answer" id="ans1">
+      <div class="sample-answer-label">Sample Answer</div>
+      SageMaker Canvas supports multiple stages of the ML lifecycle within a single tool. It covers <strong>data ingestion and preparation</strong> (connecting to data sources and cleaning data visually), <strong>model training</strong> (automated model building without code), <strong>model evaluation</strong> (accuracy metrics and model leaderboards displayed in the interface), and <strong>deployment and prediction</strong> (generating batch or real-time predictions and exporting results). It does not typically cover the earliest stage of problem framing, which happens before any tool is opened.
+      <br><br>
+      <span class="lifecycle-tag">Data Preparation</span>
+      <span class="lifecycle-tag">Model Training</span>
+      <span class="lifecycle-tag">Model Evaluation</span>
+      <span class="lifecycle-tag">Deployment / Prediction</span>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="question-text"><span class="question-num">2.</span> Is coding required to use SageMaker Canvas? What does the page suggest about who this tool is designed for?</p>
+    <button class="reveal-btn" onclick="toggleAnswer('ans2', this)">Reveal a sample answer</button>
+    <div class="sample-answer" id="ans2">
+      <div class="sample-answer-label">Sample Answer</div>
+      No coding is required. SageMaker Canvas is explicitly marketed as a no-code tool. The page uses phrases like "no code" and "point-and-click" and describes the audience as business analysts, line-of-business users, and domain experts who need ML capabilities without relying on a data science or engineering team. This positions Canvas as a tool that lowers the barrier to entry for ML, allowing people with deep domain knowledge but limited technical background to build and use predictive models.
+    </div>
+  </div>
+
+  <div class="question-block">
+    <p class="question-text"><span class="question-num">3.</span> What kinds of problems does SageMaker Canvas handle? Give at least two specific examples and connect each one to a learning type you studied in Module 4.</p>
+    <button class="reveal-btn" onclick="toggleAnswer('ans3', this)">Reveal a sample answer</button>
+    <div class="sample-answer" id="ans3">
+      <div class="sample-answer-label">Sample Answer</div>
+      SageMaker Canvas handles several ML problem types. Two clear examples:
+      <br><br>
+      <strong>Classification</strong> (for example, predicting whether a customer will churn or stay): This is a supervised learning problem. The model is trained on historical customer records that are labeled with the known outcome (churned or retained).
+      <br><br>
+      <strong>Time series forecasting</strong> (for example, predicting next month's product demand): This is also a supervised learning problem. The model trains on historical sequences of values with known outcomes to predict future values.
+      <br><br>
+      Both problem types rely on labeled historical data, which is the defining characteristic of supervised learning. Canvas automates the model selection and training process for each type, but the underlying approach is still supervised.
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  AI Essentials &nbsp;|&nbsp; Module 4 Exploration Activity &nbsp;|&nbsp; Non-Graded
+</div>
+
+<script>
+function toggleAnswer(id, btn) {
+  var el = document.getElementById(id);
+  if (el.style.display === 'block') {
+    el.style.display = 'none';
+    btn.textContent = 'Reveal a sample answer';
+  } else {
+    el.style.display = 'block';
+    btn.textContent = 'Hide sample answer';
+  }
+}
+</script>
+
+</body>
+</html>
